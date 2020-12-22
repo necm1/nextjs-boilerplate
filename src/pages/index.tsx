@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
+import React, {ReactElement} from 'react';
 import Head from 'next/head';
-import { inject } from '@ares/inject';
-import { Test } from '@ares/service/test';
+import {inject} from '@ares/inject';
+import {Test} from '@ares/service/test';
 
 /**
  * @class Home
@@ -15,7 +15,7 @@ export default class Home extends React.Component {
    *
    * @returns ReactElement<any>
    */
-  render(): ReactElement<any>  {
+  render(): ReactElement<any> {
     this.test.a();
     this.test.b();
     return (

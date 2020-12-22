@@ -25,7 +25,8 @@
     "paths": {
       "@ares/model/*": ["_model/*"],
       "@ares/service/*": ["_service/*"],
-      "@ares/inject": ["decorators/inject.ts"]
+      "@ares/inject": ["decorators/inject.ts"],
+      "@ares/style": ["styles"]
     }
   },
   "exclude": [

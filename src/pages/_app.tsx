@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
-import App from 'next/app';
 import '@abraham/reflection';
-import {container, singleton} from 'tsyringe';
+import { container, singleton } from 'tsyringe';
+import App from 'next/app';
 import '../styles/styles.scss';
 
 @singleton()
