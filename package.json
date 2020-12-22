@@ -3,18 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && next export",
+    "start": "next dev",
     "lint": "eslint -c .eslintrc.js --ext .ts,.tsx ./src"
   },
   "dependencies": {
+    "inversify": "^5.0.5",
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "sass": "^1.30.0"
+    "sass": "^1.30.0",
+    "tsyringe": "^4.4.0"
   },
   "devDependencies": {
+    "@abraham/reflection": "^0.7.0",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
     "@types/node": "^14.14.14",
     "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.11.0",

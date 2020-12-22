@@ -1,7 +1,10 @@
-import App from 'next/app';
 import React, { ReactElement } from 'react';
+import App from 'next/app';
+import '@abraham/reflection';
+import {container, singleton} from 'tsyringe';
 import '../styles/styles.scss';
 
+@singleton()
 /**
  * @class Ares
  */
@@ -12,6 +15,8 @@ export default class Ares extends App {
    * @returns ReactElement<any>
    */
   render(): ReactElement<any> {
-    return React.createElement(this.props.Component, this.props.pageProps);
+    return <this.props.Component {...this.props.pageProps} />;
   }
 }
+
+container.registerSingleton(Ares, Ares).resolve(Ares);
