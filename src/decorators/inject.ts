@@ -25,7 +25,7 @@ export const inject = (targetClass: InjectionToken): PropertyDecorator => {
         };
 
         if (!Reflect.defineProperty(target, propertyKey, options)) {
-            throw new Error(`Could not define new property for ${targetClass.toString()}`);
+            throw new Error(`Could not define ${String(propertyKey)} property in class ${targetClass.toString()}`);
         }
 
         return Reflect.getOwnPropertyDescriptor(target, propertyKey);
