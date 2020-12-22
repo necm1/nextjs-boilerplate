@@ -1,30 +1,34 @@
 import React, {ReactElement} from 'react';
 import Head from 'next/head';
-import {inject} from '@ares/inject';
-import {Test} from '@ares/service/test';
+import { ApiService } from '@ares/service/apiService';
+import { inject } from '@ares/inject';
 
 /**
  * @class Home
  */
 export default class Home extends React.Component {
-  @inject(Test)
-  private readonly test!: Test;
+  @inject(ApiService)
+  private apiService!: ApiService;
+
+  public componentDidMount(): void {
+    this.apiService.get('').subscribe({
+      next: (data) => console.log(data)
+    });
+  }
 
   /**
    * Render Home
    *
    * @returns ReactElement<any>
    */
-  render(): ReactElement<any> {
-    this.test.a();
-    this.test.b();
+  public render(): ReactElement<any> {
     return (
       <div>
         <Head>
           <title>Hallo</title>
         </Head>
         <main>
-          <p>penis</p>
+          <p>test</p>
         </main>
       </div>
     );

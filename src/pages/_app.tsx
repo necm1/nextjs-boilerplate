@@ -14,7 +14,7 @@ export default class Ares extends App {
    *
    * @returns ReactElement<any>
    */
-  render(): ReactElement<any> {
+  public render(): ReactElement<any> {
     return <this.props.Component {...this.props.pageProps} />;
   }
 }
