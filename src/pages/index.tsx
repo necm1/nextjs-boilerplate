@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import Head from 'next/head';
-import { Test } from '../_service/test';
-import { inject } from '../decorators/inject';
+import { inject } from '@ares/inject';
+import { Test } from '@ares/service/test';
 
 /**
  * @class Home

@@ -20,10 +20,18 @@
     "rootDir": "src",
     "jsx": "preserve",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "baseUrl": "src",
+    "paths": {
+      "@ares/model/*": ["_model/*"],
+      "@ares/service/*": ["_service/*"],
+      "@ares/inject": ["decorators/inject.ts"]
+    }
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "build",
+    "out"
   ],
   "include": [
     "next-env.d.ts",
